@@ -2,7 +2,6 @@
 
 ![people](https://s3-us-west-2.amazonaws.com/web-dev-readme-photos/oo-labs/people.jpg)
 
-## Objectives
 1. Gain proficiency instantiating a class
 2. Gain ability to discern when to implement `attr_accessor`, `attr_reader`,  and `attr_writer`
 3. Gain abiity to discern when to define your own `attr_reader`(getter) and `attr_writer`(setter) methods
