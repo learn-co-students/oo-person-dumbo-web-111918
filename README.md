@@ -8,7 +8,7 @@
 3. Gain abiity to discern when to define your own `attr_reader`(getter) and `attr_writer`(setter) methods
 
 ## Introduction
-To practice object oriented programming (OOP), you're going to create a Person class. Each instance of the `Person` class will have the ablity to:
+To practice object oriented programming (OOP), you're going to create a Person class. Each instance of the `Person` class will have the ability to:
   - get paid/receive payments
   - take a bath
   - call a friend
@@ -19,9 +19,9 @@ To practice object oriented programming (OOP), you're going to create a Person c
 ## Instructions
 - First you need to create a person class that is initialized with a name that cannot be changed.
 - Each instance of class `Person`should be able to remember their name
-- Each instance of  class `Person` should start with $25 in their bank accounts
-- Each instance of  class `Person` should start with eight happiness points
-- Each instance of  class `Person` should start with eight hygiene points
+- Each instance of class `Person` should start with $25 in their bank accounts
+- Each instance of class `Person` should start with eight happiness points
+- Each instance of class `Person` should start with eight hygiene points
 - The happiness and hygiene points should be able to change, however the maximum and minimum points for both happiness and hygiene should be 10 and  0 respectively
 - The amount in the bank account should also be able to change, though it has no max or min.
 
