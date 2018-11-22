@@ -55,12 +55,32 @@ class Person
   end
 
   def work_out
-    self.hygiene -= 3)
+    self.hygiene -= 3
     self.happiness=(@happiness += 2)
     return "♪ another one bites the dust ♫"
   end
-end
 
-def call_friend(person)
+  def call_friend(friend)
+    self.happiness += 3
+    friend.happiness += 3
+    "Hi #{friend.name}! It's #{self.name}. How are you?"
+  end
+
+  def start_conversation(person, topic)
+    if topic == "politics"
+      person.happiness -= 2
+      self.happiness -= 2
+      return "blah blah partisan blah lobbyist"
+    end
+
+    if topic == "weather"
+      person.happiness += 1
+      self.happiness += 1
+      return "blah blah sun blah rain"
+    end
+
+    else "blah blah blah blah blah"
+  end
+
 
 end
