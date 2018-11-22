@@ -1,48 +1,38 @@
 class Person
-  attr_reader :name
+  attr_reader :name, :happiness, :hygiene
   attr_accessor :bank_account
 
-
+##########----- initialize ---###########
   def initialize(name, bank_account = 25, happiness = 8, hygiene = 8)
     @name = name
     @bank_account = bank_account
-    @happiness = happiness
+    @happiness = happiness          #OR @hapiness = 8
     @hygiene = hygiene
   end
 
-#happiness reader
-  def happiness
-    @happiness
-  end
-
-  #happiness setter or writer
+  # happiness setter or writer
   def happiness=(happiness)
-    if happiness < 10 && happiness > 0
-    @happiness = happiness
-  elsif happiness >= 10
-    @happiness = 10
-  elsif happiness <= 0
-    @happiness = 0
+    if happiness >= 10
+      @happiness = 10
+    elsif happiness <= 0
+      @happiness = 0
+    else
+      @happiness = happiness
     end
   end
 
-#hygiene reader
-  def hygiene
-    @hygiene
-  end
-
-  #hygiene setter or writer
+  # hygiene setter or writer
   def hygiene=(hygiene)
-    if hygiene < 10 && hygiene > 0
-        @hygiene = hygiene
-      elsif hygiene >= 10
-          @hygiene = 10
-      elsif hygiene <= 0
-          @hygiene = 0
+    if hygiene >= 10
+      @hygiene = 10
+    elsif hygiene <= 0
+      @hygiene = 0
+    else
+      @hygiene = hygiene
     end
   end
-##############################  METHODS  ####################################
 
+#############----  methods  ----#############
   def happy?
     @happiness > 7
   end
@@ -58,16 +48,13 @@ class Person
 
   def take_bath
     self.hygiene += 4
-    # if hygiene > 10
-    #   @hygiene = 10
-    # end
     return "♪ Rub-a-dub just relaxing in the tub ♫"
   end
 
   def work_out
     self.hygiene -= 3
     self.happiness += 2
-      return "♪ another one bites the dust ♫"
+    return "♪ another one bites the dust ♫"
   end
 
   def call_friend(friend)
@@ -78,8 +65,8 @@ class Person
 
   def start_conversation(person, topic)
     if topic == "politics"
-      self.happiness -=2
-      person.happiness -=2
+      self.happiness -= 2
+      person.happiness -= 2
       return "blah blah partisan blah lobbyist"
     elsif topic == "weather"
       self.happiness += 1
@@ -88,7 +75,7 @@ class Person
     elsif topic != "weather" || topic != "politics"
       return "blah blah blah blah blah"
     end
-
   end
+
 
 end
